@@ -330,13 +330,3 @@ if __name__ == "__main__":
 
                     elif shutdown == "no":
                         break
-
-                
-
-
-
-
-                
-
-
- 
