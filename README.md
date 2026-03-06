@@ -2,6 +2,10 @@
 
 **Aawaz** is an AI-based personal voice assistant designed to help you automate tasks, retrieve information, and manage your daily routine using voice commands. It functions similarly to assistants like Jarvis, capable of performing web searches, playing music, reading news, and more.
 
+## Formal Project Report / Summary
+
+[**Click Here to Read**](https://drive.google.com/file/d/1sN5Hdx1XVRlvphSHN66PcpkYn5WkXAWO/view?usp=share_link)
+
 ## Features
 
 Aawaz comes packed with a variety of useful features:
