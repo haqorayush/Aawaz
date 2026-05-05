@@ -1,66 +1,252 @@
-# AAWAZ - Desktop Voice Assistant
+# 🎙️ Aawaz — AI Voice Agent System
 
-A Python-based desktop assistant inspired by Iron Man's AAWAZ. This project handles voice commands for various tasks like web searches, system control, scheduling, and more.
+> Aawaz is a modular, cross-platform **AI agent system with a voice interface** that can understand, reason, and act — combining LLM intelligence with real-world tool execution.
 
-## Formal Project Summary
+---
 
-[**Pre-Audit Report**](https://drive.google.com/file/d/1EqSjwomw2K0cwBBxW_xQIHzjaldWQpeE/view?usp=sharing) / [**Final Report**](https://drive.google.com/file/d/1UAc9UyIgyeARoYDOKDFNNbqF-cGG8QXy/view?usp=share_link) / [**Audio Report**](https://drive.google.com/file/d/1a79y6Da4uIZN8yGpfmdE6yR1jOpyUqM1/view?usp=sharing) / [**Final Presentation**](https://drive.google.com/file/d/1XiP7soMKq_UnIOvbfozp7nxGq3CXlD47/view?usp=sharing)
+## 🚀 Overview
 
-## Features
+Aawaz started as a simple voice assistant and evolved into a **fully structured AI agent system**.
 
-Aawaz comes packed with a variety of useful features:
+Unlike traditional assistants built on rigid rules, Aawaz uses:
+- 🧠 **LLM-based reasoning**
+- ⚙️ **Deterministic execution**
+- 🔁 **Context-aware interactions**
 
-- **Voice Control**: Activated by saying "Wake up".
-- **Cross-Platform**: Supports Windows and macOS (high-quality native voice on Mac).
-- **Web Tasks**: Google search, YouTube playback, Wikipedia summaries.
-- **System Control**: Open/Close apps, volume control, screenshots, and shutdown.
-- **Productivity**: Daily task scheduling, "Remember" notes, Focus mode.
-- **Entertainment**: IPL scores, favorite music, and Rock-Paper-Scissors.
+This hybrid approach ensures both **flexibility (AI)** and **reliability (code)**.
 
-## Setup Instructions
+---
 
-### 1. Requirements
-Ensure you have Python 3.12+ installed.
+## 🧠 Core Capabilities
 
-### 2. Virtual Environment
+### 🔹 AI Agent Intelligence
+- LLM-powered intent reasoning (Groq + LLaMA 3)
+- Structured JSON decision pipeline
+- Parameter extraction from natural language
+- Multi-step task execution
+- Confidence scoring + clarification handling
+- Context-aware conversation memory
+
+### ⚙️ System Automation
+- Application control (open/close apps)
+- OS-level actions (shutdown, system control)
+- Media & volume control
+- Screenshot & system utilities
+
+### 🌐 Real-Time Intelligence
+- Weather reporting 🌤️  
+- News aggregation 📰  
+- IPL live scores 🏏  
+- Wikipedia & web search 🔍  
+
+### 🎤 Voice Interaction
+- Speech-to-Text (STT)
+- Text-to-Speech (TTS)
+- Wake-word interaction
+- Voice + text hybrid interface
+
+### 🧘 Productivity Features
+- Task scheduling
+- Persistent memory (notes)
+- Focus mode (website blocking + tracking)
+- Usage visualization
+
+---
+
+## 🏗️ System Architecture
+
+Voice Input / Text Input  
+        ↓  
+Speech-to-Text (STT)  
+        ↓  
+LLM Agent (Reasoning + Decision)  
+        ↓  
+Structured Output (JSON)  
+        ↓  
+Tool Execution Layer  
+        ↓  
+(Optional) LLM Response  
+        ↓  
+Text-to-Speech (TTS)  
+
+---
+
+## 🧩 Project Structure
+
+```
+aawaz/
+│
+├── main.py                 # Entry point
+├── config.py               # Environment + config
+│
+├── audio/
+│   ├── stt.py              # Speech-to-text
+│   ├── tts.py              # Text-to-speech
+│
+├── core/
+│   ├── assistant.py        # Central execution logic
+│   ├── llm_agent.py        # LLM reasoning + decision system
+│
+├── features/
+│   ├── search.py
+│   ├── weather.py
+│   ├── memory.py
+│   ├── news.py
+│   ├── ipl.py
+│   ├── automation.py
+│
+├── system/
+│   ├── os_controller.py    # Cross-platform OS handling
+│
+├── ui.py                   # Streamlit UI
+```
+
+---
+
+## 🧠 AI Decision Pipeline
+
+Example output from LLM agent:
+
+```json
+{
+  "intent": "search",
+  "platform": "youtube",
+  "extracted_parameter": "relaxing music",
+  "confidence": 0.92,
+  "reason": "User wants to play relaxing music on YouTube"
+}
+```
+
+---
+
+## 🖥️ UI (Streamlit)
+
+Aawaz includes a **real-time interactive UI**:
+
+### Features:
+- 💬 Chat interface (like ChatGPT)
+- 🎤 Voice input support
+- 🧠 AI Transparency Panel:
+  - Intent
+  - Extracted parameters
+  - Confidence score
+  - Selected tool
+- 📊 Debug logs for system visibility
+- ⚡ Quick action buttons (weather, news, etc.)
+
+---
+
+## ⚙️ Tech Stack
+
+### Core
+- Python 3.12
+
+### AI / LLM
+- Groq API (LLaMA 3 — 8B + 70B)
+
+### Voice
+- SpeechRecognition
+- PyAudio
+- pyttsx3 / gTTS
+
+### Backend
+- Requests
+- BeautifulSoup
+- WolframAlpha
+- Wikipedia API
+
+### UI
+- Streamlit
+
+---
+
+## 🔐 Security
+
+- API keys managed via `.env`
+- No hardcoded credentials
+- Config handled via `python-dotenv`
+
+---
+
+## 🛠️ Engineering Highlights
+
+- Refactored monolithic script → modular architecture
+- Designed hybrid LLM + deterministic system
+- Implemented structured decision-making (JSON outputs)
+- Built AI agent layer with reasoning + tool selection
+- Added confidence-based fallback & clarification
+- Introduced cross-platform OS abstraction (macOS + Windows)
+- Integrated real-time UI with decision transparency
+- Implemented error handling and execution safety
+
+---
+
+## 🎯 Why This Project Matters
+
+Most assistants:  
+> keyword → function  
+
+Aawaz:  
+> understand → reason → decide → execute  
+
+This shift makes it closer to:
+- **AI agents**
+- **real-world automation systems**
+- **next-gen human-computer interfaces**
+
+---
+
+## 📸 Demo
+
+<img width="1710" height="985" alt="Screenshot 2026-05-05 at 12 37 23 PM" src="https://github.com/user-attachments/assets/87ef2b17-99e0-4f79-91ac-27dde64a6872" />
+
+
+---
+
+## ⚡ Getting Started
+
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+git clone https://github.com/haqorayush/Aawaz
+cd Aawaz
 pip install -r requirements.txt
+streamlit run ui.py
 ```
 
-### 3. Dependencies
-On macOS, you may need to install `portaudio` for microphone access:
-```bash
-brew install portaudio
-```
+---
 
-### 4. API Keys
-This project uses environment variables to manage API keys safely.
-1.  Copy the `.env.example` file and rename it to `.env`.
-2.  Add your keys inside the `.env` file:
-    *   `NEWS_API_KEY`: Get from [NewsAPI.org](https://newsapi.org/).
-    *   `WOLFRAMALPHA_APP_ID`: Get from [WolframAlpha Developer Portal](https://developer.wolframalpha.com/).
+## 🧪 Example Commands
 
-## Usage
-Run the main script:
-```bash
-python Aawaz_main.py
-```
-Speak **"Wake up"** to start the assistant, and **"Go to sleep"** to put it on standby.
+- "Search YouTube and play something relaxing"
+- "What's the weather in Delhi?"
+- "Tell me the latest news"
+- "Open Chrome"
+- "Explain black holes"
 
-## Future Hosting Plans
-This project is designed to be shared and hosted on platforms like GitHub. Ensure you keep your API keys private!
+---
+
+## 📌 Future Improvements
+
+- Full function-calling schema (OpenAI-style tools)
+- Local LLM support (Ollama)
+- Web deployment (public demo)
+- Mobile integration
+- Advanced memory system (long-term context)
+
+---
 
 ## 🤝 Contributing
-Contributions are welcome! If you'd like to improve Aawaz:
 
-- Fork the repository.
-- Create a new branch (git checkout -b feature/YourFeature).
-- Commit your changes.
-- Push to the branch.
-- Open a Pull Request.
+Contributions, ideas, and feedback are welcome!
 
-## License
-This project is open-source. Please check the repository for specific license information.
+---
 
+## ⭐ Support
+
+If you found this interesting, consider:
+- ⭐ Starring the repo  
+- 🔁 Sharing it  
+- 💬 Giving feedback  
+
+---
+
+> Built with the goal of moving from “scripts” to **real AI systems** 🚀
