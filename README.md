@@ -1,8 +1,11 @@
-# JARVIS - Desktop Voice Assistant
+# AAWAZ - Desktop Voice Assistant
 
 A Python-based desktop assistant inspired by Iron Man's JARVIS. This project handles voice commands for various tasks like web searches, system control, scheduling, and more.
 
 ## Features
+
+Aawaz comes packed with a variety of useful features:
+
 - **Voice Control**: Activated by saying "Wake up".
 - **Cross-Platform**: Supports Windows and macOS (high-quality native voice on Mac).
 - **Web Tasks**: Google search, YouTube playback, Wikipedia summaries.
@@ -44,3 +47,16 @@ Speak **"Wake up"** to start the assistant, and **"Go to sleep"** to put it on s
 
 ## Future Hosting Plans
 This project is designed to be shared and hosted on platforms like GitHub. Ensure you keep your API keys private!
+
+## 🤝 Contributing
+Contributions are welcome! If you'd like to improve Aawaz:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature/YourFeature).
+- Commit your changes.
+- Push to the branch.
+- Open a Pull Request.
+
+## License
+This project is open-source. Please check the repository for specific license information.
+
