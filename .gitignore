@@ -1,0 +1,12 @@
+__pycache__/
+venv/
+.env
+*.mp3
+*.jpg
+*.txt
+!requirements.txt
+!README.md
+build/
+dist/
+*.spec
+.DS_Store
