@@ -12,7 +12,7 @@ load_dotenv()
 def get_engine():
     if sys.platform == "darwin":
         # We can use 'say' or 'nsss' driver for pyttsx3. 
-        # Jarvis_main.py was using subprocess 'say' which sounds better on macOS.
+        # Aawaz_main.py was using subprocess 'say' which sounds better on macOS.
         return None
     elif sys.platform == "win32":
         return pyttsx3.init("sapi5")
@@ -20,7 +20,7 @@ def get_engine():
         return pyttsx3.init()
 
 def speak(audio):
-    print(f"JARVIS: {audio}")
+    print(f"AAWAZ: {audio}")
     if sys.platform == "darwin":
         # macOS: use the native 'say' command for high-quality voice
         MACOS_VOICE = "Daniel" 

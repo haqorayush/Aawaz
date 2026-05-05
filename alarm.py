@@ -31,7 +31,7 @@ deletetime.close()
 
 def ring(time):
     timeset = str(time)
-    timenow = timeset.replace("jarvis","")
+    timenow = timeset.replace("aawaz","")
     timenow = timenow.replace("set an alarm","")
     timenow = timenow.replace(" and ",":")
     Alarmtime = str(timenow).strip()
@@ -39,14 +39,22 @@ def ring(time):
     while True:
         currenttime = datetime.datetime.now().strftime("%H:%M:%S")
         if currenttime == Alarmtime:
-            speak("Alarm ringing,sir")
-            # Cross-platform: open music file
-            if sys.platform == "darwin":
-                subprocess.Popen(["open", "music.mp3"])
-            elif sys.platform == "win32":
-                os.startfile("music.mp3")
+            speak("Alarm ringing, sir")
+            # Check if music file exists
+            music_file = "music.mp3"
+            if os.path.exists(music_file):
+                if sys.platform == "darwin":
+                    subprocess.Popen(["open", music_file])
+                elif sys.platform == "win32":
+                    os.startfile(music_file)
+                else:
+                    subprocess.Popen(["xdg-open", music_file])
             else:
-                subprocess.Popen(["xdg-open", "music.mp3"])
+                # Fallback: Repeatedly speak or use system beep
+                for _ in range(5):
+                    speak("Wake up sir! It's time!")
+                    if sys.platform == "darwin":
+                        os.system("afplay /System/Library/Sounds/Ping.aiff")
             break
 
 ring(Time)

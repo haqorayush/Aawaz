@@ -1,6 +1,6 @@
 # AAWAZ - Desktop Voice Assistant
 
-A Python-based desktop assistant inspired by Iron Man's JARVIS. This project handles voice commands for various tasks like web searches, system control, scheduling, and more.
+A Python-based desktop assistant inspired by Iron Man's AAWAZ. This project handles voice commands for various tasks like web searches, system control, scheduling, and more.
 
 ## Formal Project Summary
 
@@ -45,7 +45,7 @@ This project uses environment variables to manage API keys safely.
 ## Usage
 Run the main script:
 ```bash
-python Jarvis_main.py
+python Aawaz_main.py
 ```
 Speak **"Wake up"** to start the assistant, and **"Go to sleep"** to put it on standby.
 

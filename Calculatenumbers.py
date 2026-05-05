@@ -1,6 +1,6 @@
 import os
 import wolframalpha
-from Jarvis_utils import speak
+from Aawaz_utils import speak
 
 def WolfRamAlpha(query):
     apikey = os.getenv("WOLFRAMALPHA_APP_ID")
@@ -18,7 +18,7 @@ def WolfRamAlpha(query):
 
 def Calc(query):
     Term = str(query)
-    Term = Term.replace("jarvis","")
+    Term = Term.replace("aawaz","")
     Term = Term.replace("multiply","*")
     Term = Term.replace("plus","+")
     Term = Term.replace("minus","-")

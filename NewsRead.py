@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-from Jarvis_utils import speak
+from Aawaz_utils import speak
 
 def latestnews():
     api_key = os.getenv("NEWS_API_KEY")

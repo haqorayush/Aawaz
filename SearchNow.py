@@ -1,12 +1,12 @@
 import webbrowser
 import pywhatkit
 import wikipedia
-from Jarvis_utils import speak
+from Aawaz_utils import speak
 
 def searchGoogle(query):
     if "google" in query:
         import wikipedia as googleScrap
-        query = query.replace("jarvis","")
+        query = query.replace("aawaz","")
         query = query.replace("google search","")
         query = query.replace("google","")
         speak("This is what i found on google")
@@ -23,7 +23,7 @@ def searchYoutube(query):
         speak("This is what i found for your search!")
         query = query.replace("youtube search","")
         query = query.replace("youtube","")
-        query = query.replace("jarvis","")
+        query = query.replace("aawaz","")
         web = "https://www.youtube.com/results?search_query=" + query
         webbrowser.open(web)
         pywhatkit.playonyt(query)
@@ -34,7 +34,7 @@ def searchWikipedia(query):
         speak("Searching from wikipedia....")
         query = query.replace("wikipedia","")
         query = query.replace("search wikipedia","")
-        query = query.replace("jarvis","")
+        query = query.replace("aawaz","")
         try:
             Results = wikipedia.summary(query,sentences = 2)
             speak("According to wikipedia..")

@@ -12,7 +12,7 @@ from pygame import mixer
 import speedtest 
 
 # Local imports
-from Jarvis_utils import speak, takeCommand
+from Aawaz_utils import speak, takeCommand
 from GreetMe import greetMe
 from FocusGraph import focus_graph
 from Translator import translategl
@@ -46,7 +46,7 @@ if __name__ == "__main__":
                     speak("Ok sir , You can call me anytime")
                     break 
                 
-                #################### JARVIS: THe Trilogy 2.0 #####################
+                #################### AAWAZ: THe Trilogy 2.0 #####################
 
                 elif "schedule my day" in query:
                     tasks = [] #Empty list 
@@ -106,7 +106,7 @@ if __name__ == "__main__":
                     focus_graph()
 
                 elif "translate" in query:
-                    query = query.replace("jarvis","")
+                    query = query.replace("aawaz","")
                     query = query.replace("translate","")
                     translategl(query)
 
@@ -227,7 +227,7 @@ if __name__ == "__main__":
 
                 elif "calculate" in query:
                     query = query.replace("calculate","")
-                    query = query.replace("jarvis","")
+                    query = query.replace("aawaz","")
                     Calc(query)
 
                 elif "whatsapp" in query:
@@ -237,7 +237,7 @@ if __name__ == "__main__":
 
                 elif "temperature" in query or "weather" in query:
                     # Extract city from query, default to "delhi"
-                    city = query.replace("jarvis","").replace("temperature","").replace("weather","")
+                    city = query.replace("aawaz","").replace("temperature","").replace("weather","")
                     city = city.replace("what is the","").replace("today","").replace("in","").replace("of","").strip()
                     if not city:
                         city = "delhi"
@@ -270,7 +270,7 @@ if __name__ == "__main__":
 
                 elif "remember that" in query:
                     rememberMessage = query.replace("remember that","")
-                    rememberMessage = rememberMessage.replace("jarvis","")
+                    rememberMessage = rememberMessage.replace("aawaz","")
                     speak("You told me to remember that"+rememberMessage)
                     remember = open("Remember.txt","a")
                     remember.write(rememberMessage)
