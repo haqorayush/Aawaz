@@ -234,19 +234,4 @@ streamlit run ui.py
 
 ---
 
-## 🤝 Contributing
-
-Contributions, ideas, and feedback are welcome!
-
----
-
-## ⭐ Support
-
-If you found this interesting, consider:
-- ⭐ Starring the repo  
-- 🔁 Sharing it  
-- 💬 Giving feedback  
-
----
-
 > Built with the goal of moving from “scripts” to **real AI systems** 🚀
